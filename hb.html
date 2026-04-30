@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking</title>
+
+    <link
+            href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+            rel="stylesheet"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="hb.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Lumière</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="nav">
+            <ul class="navbar-nav me-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="#offers">Offers</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#amenities">Amenities</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                        Rooms
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#deluxe">Deluxe Room</a></li>
+                        <li><a class="dropdown-item" href="#junior">Junior Suite</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#grand">Grand Suite</a></li>
+                        <li><a class="dropdown-item" href="#presidential">Presidential Suite</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+
+            <div class="d-flex ms-auto align-items-center gap-2">
+
+                <!-- Book Now -->
+                <button class="btn btn-dark rounded-pill px-4"
+                        data-bs-toggle="modal"
+                        data-bs-target="#bookingModal">
+                    Book Now
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+<!-- HERO CAROUSEL -->
+<div id="heroCarousel" class="carousel slide heroCarousel" data-bs-ride="carousel" data-bs-interval="3500">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="parallax-bg"
+                 style="background-image:url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=80')">
+            </div>
+            <div class="overlay">
+                <h1>Luxury Stay</h1>
+                <p>Experience comfort like never before</p>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <div class="parallax-bg"
+                 style="background-image:url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=80')">
+            </div>
+            <div class="overlay">
+                <h1>Premium Rooms</h1>
+                <p>Designed for relaxation</p>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <div class="parallax-bg"
+                 style="background-image:url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=80')">
+            </div>
+            <div class="overlay">
+                <h1>Book Now</h1>
+                <p>Your perfect vacation awaits</p>
+            </div>
+        </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<!-- ROOM SECTIONS (for navigation) -->
+<!--<section id="deluxe">Deluxe Room Section</section>-->
+<!--<section id="junior">Junior Suite Section</section>-->
+<!--<section id="grand">Grand Suite Section</section>-->
+<!--<section id="presidential">Presidential Suite Section</section>-->
+
+<div class="room-section">
+    <div class="room-section-top">
+        <h1 class="room-heading parallax-text parallax" data-speed="0.3">Our Signature Rooms</h1>
+        <p class="room-para parallax" data-speed="0.3">Pick your perfect space and enjoy a memorable stay.</p>
+    </div>
+
+    <div class="container col-xxl-8 px-4 py-5 order-md-1" id="deluxe">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+                <img
+                        src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=800&q=80"
+                        class="d-block mx-lg-auto img-fluid parallax"
+                        data-speed="0.2"
+                        alt="Bootstrap Themes"
+                        width="700"
+                        height="500"
+                        loading="lazy"
+
+                />
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-5 fw-bold lh-1 mb-3">
+                    Deluxe Room
+                </h1>
+                <p class="lead">
+                    Spacious and thoughtfully designed, our Deluxe Room offers a perfect blend of comfort and sophistication. Enjoy plush bedding, elegant interiors, and modern amenities that ensure a relaxing and memorable stay.
+                </p>
+                <button class="btn btn-dark rounded-pill px-3 parallax" data-speed="0.2" type="button" data-bs-toggle="modal"
+                        data-bs-target="#bookingModal" data-room="Deluxe Room">Book now</button>
+                <a class="btn btn-outline-dark rounded-pill px-3 mt-2 parallax" data-speed="0.2" href="room-3d.html?room=Deluxe%20Room">View 3D</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container col-xxl-8 px-4 py-5 order-md-2" id="junior">
+        <div class="row align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+                <img
+                        src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&q=80"
+                        class="d-block mx-lg-auto img-fluid parallax"
+                        data-speed="0.2"
+                        alt="Bootstrap Themes"
+                        width="700"
+                        height="500"
+                        loading="lazy"
+                />
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-5 fw-bold lh-1 mb-3">
+                    Junior Suite
+                </h1>
+                <p class="lead">
+                    Offering more space and enhanced comfort, the Junior Suite is perfect for guests who desire a little extra luxury. Featuring a separate seating area and elegant interiors, it creates an ideal environment for both relaxation and productivity.
+                </p>
+                <button class="btn btn-dark rounded-pill px-3 parallax" data-speed="0.2" type="button" data-bs-toggle="modal"
+                        data-bs-target="#bookingModal" data-room="Junior Suite">Book now</button>
+                <a class="btn btn-outline-dark rounded-pill px-3 mt-2 parallax" data-speed="0.2" href="room-3d.html?room=Junior%20Suite">View 3D</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container col-xxl-8 px-4 py-5 order-md-1" id="grand">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+                <img
+                        src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=800&q=80"
+                        class="d-block mx-lg-auto img-fluid parallax"
+                        data-speed="0.2"
+                        alt="Bootstrap Themes"
+                        width="700"
+                        height="500"
+                        loading="lazy"
+                />
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-5 fw-bold lh-1 mb-3">
+                    Grand Suite
+                </h1>
+                <p class="lead">
+                    Experience true luxury in the Grand Suite, featuring expansive living spaces, refined interiors, and premium amenities. Perfect for guests who appreciate elegance, comfort, and privacy in every detail.
+                </p>
+                <button class="btn btn-dark rounded-pill px-3 parallax" data-speed="0.2" type="button" data-bs-toggle="modal"
+                        data-bs-target="#bookingModal" data-room="Grand Suite">Book now</button>
+                <a class="btn btn-outline-dark rounded-pill px-3 mt-2 parallax" data-speed="0.2" href="room-3d.html?room=Grand%20Suite">View 3D</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container col-xxl-8 px-4 py-5 order-md-1" id="presidential">
+        <div class="row align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+                <img
+                        src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80"
+                        class="d-block mx-lg-auto img-fluid parallax"
+                        data-speed="0.2"
+                        alt="Bootstrap Themes"
+                        width="700"
+                        height="500"
+                        loading="lazy"
+                />
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-5 fw-bold lh-1 mb-3">
+                    Presidential Suite
+                </h1>
+                <p class="lead">
+                    The Presidential Suite represents the height of luxury, offering expansive spaces, exquisite interiors, and world-class amenities. Designed for ultimate comfort and privacy, it delivers an unmatched living experience.
+                </p>
+                <button class="btn btn-dark rounded-pill px-3 parallax" data-speed="0.2" type="button" data-bs-toggle="modal"
+                        data-bs-target="#bookingModal" data-room="Presidential Suite">Book now</button>
+                <a class="btn btn-outline-dark rounded-pill px-3 mt-2 parallax" data-speed="0.2" href="room-3d.html?room=Presidential%20Suite">View 3D</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="amenities-container" id="amenities">
+    <h1 class="amenities-heading">Every Comfort Considered</h1>
+    <p class="amenities-sub-text">Hotel Facilities</p>
+    <div class="amenities-section">
+
+        <div class="amenity-box">
+            <i class="bi bi-cup-hot"></i>
+            <span>Fine Dining</span>
+        </div>
+
+        <div class="amenity-box">
+            <i class="bi bi-water"></i>
+            <span>Infinity Pool</span>
+        </div>
+
+        <div class="amenity-box">
+            <i class="bi bi-flower1"></i>
+            <span>Luxury Spa</span>
+        </div>
+
+        <div class="amenity-box">
+            <i class="bi bi-cup-straw"></i>
+            <span>Rooftop Bar</span>
+        </div>
+
+        <div class="amenity-box">
+            <i class="bi bi-car-front"></i>
+            <span>Valet Parking</span>
+        </div>
+
+        <div class="amenity-box">
+            <i class="bi bi-heart-pulse"></i>
+            <span>Fitness Centre</span>
+        </div>
+
+        <div class="amenity-box">
+            <i class="bi bi-wifi"></i>
+            <span>High-Speed WiFi</span>
+        </div>
+
+        <div class="amenity-box">
+            <i class="bi bi-person-badge"></i>
+            <span>Concierge</span>
+        </div>
+
+        <div class="amenity-box">
+            <i class="bi bi-airplane"></i>
+            <span>Airport Transfer</span>
+        </div>
+
+        <div class="amenity-box">
+            <i class="bi bi-emoji-smile"></i>
+            <span>Pet Friendly</span>
+        </div>
+
+    </div>
+</div>
+
+<section class="offers-section" id="offers">
+
+    <div class="offers-header">
+        <h2>Exclusive Offers</h2>
+        <p>Handpicked deals to make your stay more special</p>
+    </div>
+
+    <div class="offers-grid">
+
+        <div class="offer-card">
+            <h4>Weekend Escape</h4>
+            <p>Enjoy a relaxing weekend with breakfast, pool access, and late checkout.</p>
+            <span class="offer-price">From ₹5,999</span>
+            <button class="btn btn-dark btn-sm"
+                    data-bs-toggle="modal"
+                    data-bs-target="#bookingModal"
+                    data-offer="Weekend Escape">
+                Book Now
+            </button>
+        </div>
+
+        <div class="offer-card">
+            <h4>Honeymoon Package</h4>
+            <p>Romantic stay with candlelight dinner, spa, and room decoration.</p>
+            <span class="offer-price">From ₹9,999</span>
+            <button class="btn btn-dark btn-sm"
+                    data-bs-toggle="modal"
+                    data-bs-target="#bookingModal"
+                    data-offer="Honeymoon Package">
+                Book Now
+            </button>
+        </div>
+
+        <div class="offer-card">
+            <h4>Stay 3 Nights, Pay 2</h4>
+            <p>Book 3 nights and get 1 night absolutely free with added benefits.</p>
+            <span class="offer-price">Limited Time</span>
+            <button class="btn btn-dark btn-sm"
+                    data-bs-toggle="modal"
+                    data-bs-target="#bookingModal"
+                    data-offer="Stay 3 Nights, Pay 2">
+                Book Now
+            </button>
+        </div>
+
+        <div class="offer-card">
+            <h4>Business Travel Plan</h4>
+            <p>Includes WiFi, breakfast, airport transfer, and meeting room access.</p>
+            <span class="offer-price">From ₹6,499</span>
+            <button class="btn btn-dark btn-sm"
+                    data-bs-toggle="modal"
+                    data-bs-target="#bookingModal"
+                    data-offer="Business Travel Plan">
+                Book Now
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- MODAL -->
+<div class="modal fade" id="bookingModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">Book Your Stay</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                <form id="booking-form" class="needs-validation" novalidate>
+
+                    <!-- Name -->
+                    <input type="text" name="name" class="form-control mb-1" placeholder="Enter full name" minlength="2" maxlength="60" autocomplete="name" required>
+                    <div class="invalid-feedback mb-2">Please enter a valid name (2-60 characters).</div>
+
+                    <!-- Email -->
+                    <input type="email" name="email" class="form-control mb-1" placeholder="name@example.com" autocomplete="email" required>
+                    <div class="invalid-feedback mb-2">Please enter a valid email address.</div>
+
+                    <!-- Phone -->
+                    <input type="tel" name="phone" class="form-control mb-1" placeholder="9876543210" inputmode="numeric" pattern="[0-9]{10}" minlength="10" maxlength="10" autocomplete="tel" required>
+                    <div class="invalid-feedback mb-2">Please enter a valid 10-digit phone number.</div>
+
+                    <!-- Members -->
+                    <input type="number" name="members" class="form-control mb-1" placeholder="Number of guests (1-10)" min="1" max="10" step="1" required>
+                    <div class="invalid-feedback mb-2">Please enter guests between 1 and 10.</div>
+
+                    <!-- Room -->
+                    <select name="room" class="form-select mb-1" required>
+                        <option value="" selected disabled>Select your room</option>
+                        <option>Deluxe Room</option>
+                        <option>Junior Suite</option>
+                        <option>Grand Suite</option>
+                        <option>Presidential Suite</option>
+                    </select>
+                    <div class="invalid-feedback mb-2">Please select a room.</div>
+
+                    <!-- Offer -->
+                    <select name="offer" class="form-select mb-3">
+                        <option>None</option>
+                        <option>Weekend Escape</option>
+                        <option>Honeymoon Package</option>
+                        <option>Stay 3 Nights, Pay 2</option>
+                        <option>Business Travel Plan</option>
+                    </select>
+
+                    <!-- Dates -->
+                    <input type="date" name="checkin" class="form-control mb-1" required>
+                    <div class="invalid-feedback mb-2">Please choose a valid check-in date.</div>
+                    <input type="date" name="checkout" class="form-control mb-1" required>
+                    <div class="invalid-feedback mb-2">Checkout must be at least one day after check-in.</div>
+
+                    <!-- Total -->
+                    <input type="text" name="total" class="form-control mb-3" placeholder="Calculated automatically" readonly>
+
+                    <!-- Buttons -->
+                    <div class="d-flex justify-content-between">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                            Close
+                        </button>
+
+                        <button type="submit" class="btn btn-dark">
+                            Confirm Booking
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<section class="reviews-section">
+
+    <div class="container">
+        <div class="reviews-header text-center">
+            <h2>What Our Guests Say</h2>
+            <p>Real experiences from our valued customers</p>
+        </div>
+
+        <div class="reviews-grid">
+
+            <div class="review-card">
+                <p>"Absolutely शानदार experience! The rooms were luxurious and the service was top-notch."</p>
+                <h5>- Rahul Sharma</h5>
+            </div>
+
+            <div class="review-card">
+                <p>"Perfect for a weekend getaway. Loved the pool and the ambience."</p>
+                <h5>- Priya Mehta</h5>
+            </div>
+
+            <div class="review-card">
+                <p>"The honeymoon package was worth every rupee. Highly recommended!"</p>
+                <h5>- Aman & Neha</h5>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+<footer class="footer">
+    <div class="container text-center">
+
+        <h5 class="footer-brand">Lumière</h5>
+
+        <p class="footer-text">
+            Experience luxury and comfort with every stay.
+        </p>
+
+        <div class="footer-links">
+            <a href="#offers">Offers</a>
+            <a href="#amenities">Amenities</a>
+            <a href="#deluxe">Rooms</a>
+        </div>
+
+        <p class="footer-copy">
+            © 2026 Lumière Hotel. All rights reserved.
+        </p>
+
+    </div>
+</footer>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script src="hb.js"></script>
+
+</body>
+</html>
