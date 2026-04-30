@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Room View</title>
+  <link rel="stylesheet" href="room-3d.css">
+</head>
+<body>
+  <div class="page-shell">
+    <div class="hud">
+      <div>
+        <p class="eyebrow">Interactive 3D Preview</p>
+        <h1 id="room-title">Deluxe Room</h1>
+        <p id="room-description">Move through the bedroom and step onto the balcony with the arrow keys.</p>
+      </div>
+
+      <div class="controls-card">
+        <p>Controls</p>
+        <span>Arrow Up / Down: move</span>
+        <span>Arrow Left / Right: turn</span>
+        <span>Space: reset view</span>
+      </div>
+
+      <a class="back-link" href="hb.html#deluxe">Back to rooms</a>
+    </div>
+
+    <canvas id="scene"></canvas>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="room-3d.js"></script>
+</body>
+</html>

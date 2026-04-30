@@ -80,22 +80,13 @@ async function startServer() {
   }
 
   try {
-    console.log('Attempting to connect to MongoDB Atlas...');
-    await mongoose.connect(MONGODB_URI, {
-      serverSelectionTimeoutMS: 5000,
-      socketTimeoutMS: 5000,
-    });
-    console.log('Connected to MongoDB Atlas');
+    // await mongoose.connect(MONGODB_URI);
+    console.log('Skipping MongoDB Atlas Connection');
     app.listen(PORT, () => {
       console.log(`Server running at http://localhost:${PORT}`);
     });
   } catch (error) {
-    console.error('MongoDB connection failed:', error);
-    console.log('\nTroubleshooting:');
-    console.log('1. Check your internet connection');
-    console.log('2. Verify MongoDB Atlas cluster is running');
-    console.log('3. Check if your IP is whitelisted in MongoDB Atlas');
-    console.log('4. Verify MONGODB_URI in .env is correct');
+    console.error('MongoDB connection failed:', error.message);
     process.exit(1);
   }
 }
